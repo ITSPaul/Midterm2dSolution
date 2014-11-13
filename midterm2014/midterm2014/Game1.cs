@@ -19,7 +19,7 @@ namespace midterm2014
     {
         GraphicsDeviceManager graphics;
         SpriteBatch spriteBatch;
-        AnimatedSprite _player;
+        Player _player;
         SimpleSprite _background;
         collectable[] _collectables;
         int _playerScore  = 0;
@@ -65,8 +65,20 @@ namespace midterm2014
             _background = new SimpleSprite(Content.Load<Texture2D>(@"images/background"),Vector2.Zero);
             _scoreFont = Content.Load<SpriteFont>("score");
             // Part 6
-            _player = new AnimatedSprite(Content.Load<Texture2D>(@"images/player"),
-                                            Vector2.Zero,14);
+
+            SoundEffect[] _PlayerSounds = new SoundEffect[5];
+            for (int i = 0; i < _PlayerSounds.Length; i++)
+                _PlayerSounds[i] = 
+                    Content.Load<SoundEffect>(@"sounds/PlayerDirection/"+ i.ToString());
+
+	        Texture2D[] textures = new Texture2D[5];
+            textures[0] = Content.Load<Texture2D>(@"images/left_strip8");
+            textures[1] = Content.Load<Texture2D>(@"images/right_strip8");
+            textures[2] = Content.Load<Texture2D>(@"images/up_strip8");
+            textures[3] = Content.Load<Texture2D>(@"images/down_strip8");
+            textures[4] = Content.Load<Texture2D>(@"images/stand_strip8");
+            _player = new Player(textures,_PlayerSounds,
+                                            Vector2.Zero,8,0,5.0f);
             // part 5 
             ResetCollectables(Content.Load<Texture2D>(@"images/collectable"));
 
@@ -103,16 +115,8 @@ namespace midterm2014
             if (GamePad.GetState(PlayerIndex.One).Buttons.Back == ButtonState.Pressed)
                 this.Exit();
             // Part 6
-            _player.UpdateAnimation(gameTime);
-            // TODO: Add your update logic here
-            if (Keyboard.GetState().IsKeyDown(Keys.Left))
-                _player.Move(new Vector2(-1, 0) * speed);
-            if (Keyboard.GetState().IsKeyDown(Keys.Up))
-                _player.Move(new Vector2(0, -1) * speed);
-            if (Keyboard.GetState().IsKeyDown(Keys.Down))
-                _player.Move(new Vector2(0, 1) * speed);
-            if (Keyboard.GetState().IsKeyDown(Keys.Right))
-                _player.Move(new Vector2(1, 0) * speed);
+            _player.update(gameTime);
+
             if (Keyboard.GetState().IsKeyDown(Keys.R))
                     ResetGame();
             

@@ -1,0 +1,46 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="Sprites.AnimatedSprite">
+    <Position X="5.25" Y="0.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARAAAQQgIAAAgAAEAAAIIQQEAIAAAAAEgQAAAAQAIA=</HashCode>
+      <FileName>AnimatedSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="midterm2014.Player">
+    <Position X="7.25" Y="1.75" Width="1.5" />
+    <NestedTypes>
+      <Enum Name="midterm2014.Player.DIRECTION" Collapsed="true">
+        <TypeIdentifier>
+          <NewMemberFileName>Player.cs</NewMemberFileName>
+        </TypeIdentifier>
+      </Enum>
+    </NestedTypes>
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQAAAggAAAAAAAAAAAAAAAAABAAIAAAEAAA=</HashCode>
+      <FileName>Player.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="midterm2014.collectable">
+    <Position X="3" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AhAAAAAAAAAAAAAAAAIAAAAAAAAAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>collectable.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Sprites.SimpleSprite">
+    <Position X="1" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAQAIAAAAAgAAIAAAAAAAAAABAIAAAAAAAAAAA=</HashCode>
+      <FileName>SimpleSprite.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="midterm2014.Game1">
+    <Position X="10" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAUEAAAAEAAwEAAQAACAAAAAMAAUhAAAQAAQAABAQ=</HashCode>
+      <FileName>Game1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

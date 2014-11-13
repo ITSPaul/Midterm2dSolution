@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework.Input;
 
 namespace Sprites
 {
-    class AnimatedSprite
+    public class AnimatedSprite
     {
         //sprite texture and position
         Texture2D spriteImage;
@@ -113,9 +113,9 @@ namespace Sprites
             position += delta;
             // update the new position of the Bounding Rect for an Animated sprite
             BoundingRect = new Rectangle((int)this.position.X, (int)this.position.Y, this.spriteWidth, this.spriteHeight);
-            if (delta.X < 0)
-                _effect = SpriteEffects.FlipHorizontally;
-            else _effect = SpriteEffects.None;
+            //if (delta.X < 0)
+            //    _effect = SpriteEffects.FlipHorizontally;
+            //else _effect = SpriteEffects.None;
                 
         }
         public void Draw(SpriteBatch spriteBatch,SpriteFont borrowedFont)

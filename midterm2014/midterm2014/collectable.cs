@@ -8,7 +8,7 @@ using Microsoft.Xna.Framework;
 
 namespace midterm2014
 {
-    class collectable : SimpleSprite
+    public class collectable : SimpleSprite
     {
         int _value;
 
